@@ -3,6 +3,7 @@ import { SITE, NAV_ITEMS } from "@/data/site";
 import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
+import { SpaceBackground } from "@/components/SpaceBackground";
 
 function Header() {
   const location = useLocation();
@@ -13,7 +14,7 @@ function Header() {
   }, [location.pathname]);
 
   return (
-    <header className="border-b border-nano-border bg-nano-surface/80 backdrop-blur-sm sticky top-0 z-50">
+    <header className="glass border-x-0 border-t-0 sticky top-0 z-50">
       <div className="max-w-2xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link 
           to="/" 
@@ -21,7 +22,7 @@ function Header() {
           title="Home"
         >
           <Logo />
-          <span className="text-sm font-semibold text-nano-text">{SITE.name}</span>
+          <span className="font-brand text-sm tracking-wider uppercase text-nano-text">{SITE.name}</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -59,7 +60,7 @@ function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <nav className="md:hidden border-t border-nano-border bg-nano-surface px-6 py-3 space-y-2">
+        <nav className="md:hidden border-t border-nano-border px-6 py-3 space-y-2">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.path}
@@ -143,7 +144,7 @@ function ScrollToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-6 right-6 p-2 bg-nano-surface border border-nano-border rounded-full shadow-sm hover:shadow-md transition-all text-nano-text-secondary hover:text-nano-text z-40"
+      className="fixed bottom-6 right-6 p-2 glass rounded-full shadow-sm hover:shadow-md transition-all text-nano-text-secondary hover:text-nano-text z-40"
       aria-label="Scroll to top"
     >
       <ArrowUp className="w-4 h-4" />
@@ -159,7 +160,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-nano-bg">
+    <div className="min-h-screen flex flex-col">
+      <SpaceBackground />
+      <div className={`space-scrim${location.pathname === "/" ? " home" : ""}`} aria-hidden="true" />
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />

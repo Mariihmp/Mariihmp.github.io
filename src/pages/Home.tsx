@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 import { blogPosts } from "@/data/blog";
 import { tilEntries } from "@/data/til";
 import { Tag } from "@/components/Tag";
-import { ArrowRight, Github, Linkedin, Twitter, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { format } from "date-fns";
 
 export function Home() {
@@ -15,44 +15,48 @@ export function Home() {
   return (
     <div className="max-w-2xl mx-auto px-6 animate-fade-in">
       {/* Hero */}
-      <section className="py-12 md:py-16">
-        <div className="space-y-4">
-          <h1 className="text-2xl md:text-3xl font-bold text-nano-text">
-            {SITE.name}
+      <section className="pt-20 pb-16 md:pt-32 md:pb-24">
+        <div className="space-y-6">
+          <h1 className="font-display font-normal text-nano-text text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
+            Notes on how machines <em className="italic text-nano-accent">work</em>.
           </h1>
-          <p className="text-nano-text-secondary leading-relaxed">
-            {SITE.title}
-          </p>
-          <p className="text-nano-text-secondary leading-relaxed text-sm">
+          <p className="text-[#ddd4fa] text-base md:text-lg leading-relaxed max-w-xl [text-shadow:0_1px_12px_rgba(11,6,24,0.9)]">
             {SITE.description}
           </p>
-          <div className="flex items-center gap-1 text-xs text-nano-text-secondary">
-            <MapPin className="w-3 h-3" />
-            <span>{SITE.location}</span>
-            <span className="mx-2">·</span>
-            <span className="inline-flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+          <div className="space-y-2">
+            <p className="text-xs uppercase tracking-[0.18em] text-nano-text-secondary">Currently focused on</p>
+            <div className="flex flex-wrap gap-2">
+              {SITE.focus.map((f) => (
+                <span key={f} className="glass rounded-full px-3 py-1 text-sm text-nano-text">
+                  {f}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-2 text-xs text-nano-text-secondary">
+            <span className="inline-flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
               {SITE.status}
             </span>
-          </div>
-          <div className="flex items-center gap-4 pt-2">
-            <a href={SITE.github} target="_blank" rel="noopener noreferrer" className="text-nano-text-secondary hover:text-nano-text transition-colors">
-              <Github className="w-4 h-4" />
-            </a>
-            <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" className="text-nano-text-secondary hover:text-nano-text transition-colors">
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a href={SITE.twitter} target="_blank" rel="noopener noreferrer" className="text-nano-text-secondary hover:text-nano-text transition-colors">
-              <Twitter className="w-4 h-4" />
-            </a>
-            <a href={`mailto:${SITE.email}`} className="text-nano-text-secondary hover:text-nano-text transition-colors">
-              <Mail className="w-4 h-4" />
-            </a>
+            <span className="flex items-center gap-4">
+              <a href={SITE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-nano-text transition-colors">
+                <Github className="w-4 h-4" />
+              </a>
+              <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-nano-text transition-colors">
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a href={SITE.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-nano-text transition-colors">
+                <Twitter className="w-4 h-4" />
+              </a>
+              <a href={`mailto:${SITE.email}`} aria-label="Email" className="hover:text-nano-text transition-colors">
+                <Mail className="w-4 h-4" />
+              </a>
+            </span>
           </div>
         </div>
       </section>
 
-      <hr className="border-nano-border" />
+      <div className="glass rounded-2xl px-6 mb-8">
 
       {/* Recent Blog Posts */}
       <section className="py-10">
@@ -151,6 +155,7 @@ export function Home() {
           ))}
         </div>
       </section>
+      </div>
     </div>
   );
 }

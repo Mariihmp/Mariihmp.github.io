@@ -17,8 +17,8 @@ export function Tag({ label, onClick, active, size = "sm" }: TagProps) {
         onClick={onClick}
         className={`${base} transition-colors ${
           active
-            ? "bg-nano-accent text-white"
-            : "bg-nano-tag-bg text-nano-tag-text hover:bg-gray-200"
+            ? "bg-nano-accent text-nano-bg"
+            : "bg-nano-tag-bg text-nano-tag-text hover:bg-nano-accent/25"
         }`}
       >
         {label}
