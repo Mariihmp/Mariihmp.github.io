@@ -1,8 +1,9 @@
 export const SITE = {
   name: "Maryam Hampaei",
-  title: "ML Engineer & AI Safety Researcher",
+  title: "ML & AI Safety Researcher",
   description:
-    "Building ML systems and exploring AI Safety. Currently focused on MLOps and AI agents.",
+    "ML & AI safety researcher, currently doing research on digital minds, cooperative AI and animal welfare.",
+  focus: ["Digital minds", "Cooperative AI", "Animal welfare research"],
   url: "https://mariihmp.github.io",
   repo: "https://github.com/Mariihmp/Mariihmp.github.io",
   email: "marhmpa@gmail.com",

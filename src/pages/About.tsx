@@ -83,12 +83,12 @@ export function About() {
                   <span
                     className={`text-xs px-1.5 py-0.5 rounded ${
                       c.type === "feature"
-                        ? "bg-green-50 text-green-700"
+                        ? "bg-green-400/15 text-green-300"
                         : c.type === "bugfix"
-                        ? "bg-red-50 text-red-700"
+                        ? "bg-red-400/15 text-red-300"
                         : c.type === "docs"
-                        ? "bg-blue-50 text-blue-700"
-                        : "bg-purple-50 text-purple-700"
+                        ? "bg-blue-400/15 text-blue-300"
+                        : "bg-purple-400/15 text-purple-300"
                     }`}
                   >
                     {c.type}
