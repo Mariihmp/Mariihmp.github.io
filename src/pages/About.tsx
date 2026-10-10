@@ -181,7 +181,7 @@ export function About() {
             <Github className="w-4 h-4 text-nano-text-secondary" />
             <div>
               <div className="text-sm font-medium text-nano-text">GitHub</div>
-              <div className="text-xs text-nano-text-secondary">@yourusername</div>
+              <div className="text-xs text-nano-text-secondary">@Mariihmp</div>
             </div>
           </a>
           <a

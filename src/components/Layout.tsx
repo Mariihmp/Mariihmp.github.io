@@ -20,7 +20,8 @@ function Header() {
           className="flex items-center gap-2 hover:text-nano-accent transition-colors"
           title="Home"
         >
-          <Logo />  {/* ← REPLACE {SITE.name} WITH THIS */}
+          <Logo />
+          <span className="text-sm font-semibold text-nano-text">{SITE.name}</span>
         </Link>
 
         {/* Desktop Nav */}

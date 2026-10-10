@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Blog",
+  name: "Maryam Hampaei",
   title: "ML Engineer & AI Safety Researcher",
   description:
     "Building ML systems and exploring AI Safety. Currently focused on MLOps and AI agents.",
