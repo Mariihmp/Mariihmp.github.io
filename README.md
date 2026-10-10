@@ -11,3 +11,5 @@
 [![Email](https://img.shields.io/badge/Email-marhmpa%40gmail.com-blue?style=flat-square&logo=gmail)](mailto:marhmpa@gmail.com)
 
 </div>
+
+**Live:** https://mariihmp.github.io — pages at `/blog`, `/projects`, `/til`, `/about`.
