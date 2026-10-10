@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { SITE, NAV_ITEMS } from "@/data/site";
 import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Logo } from "@/components/Logo";  // ← ADD THIS IMPORT
+import { Logo } from "@/components/Logo";
 
 function Header() {
   const location = useLocation();
