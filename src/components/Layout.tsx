@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { SITE, NAV_ITEMS } from "@/data/site";
 import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
 import { SpaceBackground } from "@/components/SpaceBackground";
 
@@ -152,49 +152,9 @@ function ScrollToTop() {
   );
 }
 
-// Preview switch for background layouts: ?look=open|cards|frame|dark and ?accent=gold
-function useLook() {
-  const params = new URLSearchParams(window.location.search);
-  const look = params.get("look") || "open";
-  const accent = params.get("accent") || "violet";
-  useEffect(() => {
-    document.documentElement.dataset.look = look;
-    document.documentElement.dataset.accent = accent;
-  }, [look, accent]);
-  return look;
-}
-
-// In the "cards" look the scrim is opaque, with holes cut where the cards are,
-// so the moving background only shows through the cards.
-function useCardWindows(enabled: boolean, scrim: React.RefObject<HTMLDivElement | null>, isHome: boolean) {
-  useEffect(() => {
-    const el = scrim.current;
-    if (!el) return;
-    if (!enabled) { el.style.clipPath = ""; return; }
-    let raf = 0, prev = "";
-    const tick = () => {
-      const w = innerWidth, h = innerHeight;
-      let d = `M0 0H${w}V${h}H0Z`;
-      document.querySelectorAll<HTMLElement>(isHome ? ".bg-window" : "main > div").forEach((n) => {
-        const r = n.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > h) return;
-        const k = Math.min(20, r.width / 2, r.height / 2);
-        d += `M${r.left + k} ${r.top}H${r.right - k}Q${r.right} ${r.top} ${r.right} ${r.top + k}V${r.bottom - k}Q${r.right} ${r.bottom} ${r.right - k} ${r.bottom}H${r.left + k}Q${r.left} ${r.bottom} ${r.left} ${r.bottom - k}V${r.top + k}Q${r.left} ${r.top} ${r.left + k} ${r.top}Z`;
-      });
-      if (d !== prev) { el.style.clipPath = `path(evenodd, "${d}")`; prev = d; }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => { cancelAnimationFrame(raf); el.style.clipPath = ""; };
-  }, [enabled, scrim, isHome]);
-}
-
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
-  const look = useLook();
   const isHome = location.pathname === "/";
-  const scrim = useRef<HTMLDivElement>(null);
-  useCardWindows(look === "cards", scrim, isHome);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -203,7 +163,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <SpaceBackground />
-      <div ref={scrim} className={`space-scrim${isHome ? " home" : ""}`} aria-hidden="true" />
+      <div className={`space-scrim${isHome ? " home" : ""}`} aria-hidden="true" />
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
