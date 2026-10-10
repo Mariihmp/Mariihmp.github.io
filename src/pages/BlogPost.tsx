@@ -72,6 +72,23 @@ export function BlogPost() {
                 }
                 return <code>{children}</code>;
               },
+              // ![alt](video.mp4 "caption") plays a looping video; a .webm with the same name is offered first
+              img: ({ src, alt, title }) => {
+                const isVideo = typeof src === "string" && /\.mp4$/i.test(src);
+                return (
+                  <span className="media">
+                    {isVideo ? (
+                      <video autoPlay muted loop playsInline controls aria-label={alt}>
+                        <source src={src.replace(/\.mp4$/i, ".webm")} type="video/webm" />
+                        <source src={src} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <img src={src} alt={alt ?? ""} loading="lazy" />
+                    )}
+                    {title && <span className="media-caption">{title}</span>}
+                  </span>
+                );
+              },
               blockquote: ({ children }) => <blockquote>{children}</blockquote>,
               hr: () => <hr />,
               table: ({ children }) => (

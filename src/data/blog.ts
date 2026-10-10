@@ -1,3 +1,5 @@
+import { researchPosts } from "@/data/researchPosts";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -6,10 +8,11 @@ export interface BlogPost {
   date: string;
   tags: string[];
   readingTime: string;
-  category: "ml" | "mlops" | "ai-safety" | "paper-summary" | "tutorial";
+  category: "ml" | "mlops" | "ai-safety" | "paper-summary" | "tutorial" | "research";
 }
 
 export const blogPosts: BlogPost[] = [
+  ...researchPosts,
   {
     id: "constitutional-ai-deep-dive",
     title: "Constitutional AI: A Deep Dive into Self-Supervised Alignment",

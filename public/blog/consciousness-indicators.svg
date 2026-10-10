@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 518" width="1200" height="518" font-family="Sora, Segoe UI, Helvetica, Arial, sans-serif">
+<style>.t{font-size:19px;font-weight:600;fill:#ece6ff}.i{font-size:14.5px;fill:#cfc6ef}.h{font-size:30px;fill:#ece6ff;font-family:Fraunces, Georgia, serif}.s{font-size:15px;fill:#9a90c0}</style>
+<rect width="1200" height="518" rx="20" fill="#0b0618"/>
+<text x="40" y="62" class="h">Indicator properties of consciousness</text>
+<text x="40" y="92" class="s">Grouped by the scientific theory each one comes from. Adapted from Butlin, Long et al. (2023), "Consciousness in Artificial Intelligence".</text>
+<rect x="40" y="120" width="360" height="122" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="60" y="150" class="t">Recurrent processing</text>
+<circle cx="66" cy="175" r="4" fill="#f9c74f"/>
+<text x="80" y="180" class="i">Input modules using algorithmic recurrence</text>
+<circle cx="66" cy="205" r="4" fill="#f9c74f"/>
+<text x="80" y="210" class="i">Integrated perceptual representations</text>
+<rect x="40" y="264" width="360" height="92" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="60" y="294" class="t">Predictive processing</text>
+<circle cx="66" cy="319" r="4" fill="#f9c74f"/>
+<text x="80" y="324" class="i">Input modules using predictive coding</text>
+<rect x="430" y="120" width="360" height="182" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="450" y="150" class="t">Global workspace</text>
+<circle cx="456" cy="175" r="4" fill="#f9c74f"/>
+<text x="470" y="180" class="i">Specialised systems working in parallel</text>
+<circle cx="456" cy="205" r="4" fill="#f9c74f"/>
+<text x="470" y="210" class="i">Limited-capacity workspace (a bottleneck)</text>
+<circle cx="456" cy="235" r="4" fill="#f9c74f"/>
+<text x="470" y="240" class="i">Global broadcast to all modules</text>
+<circle cx="456" cy="265" r="4" fill="#f9c74f"/>
+<text x="470" y="270" class="i">State-dependent attention</text>
+<rect x="430" y="324" width="360" height="92" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="450" y="354" class="t">Attention schema</text>
+<circle cx="456" cy="379" r="4" fill="#f9c74f"/>
+<text x="470" y="384" class="i">A predictive model of its own attention</text>
+<rect x="820" y="120" width="360" height="182" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="840" y="150" class="t">Higher-order theories</text>
+<circle cx="846" cy="175" r="4" fill="#f9c74f"/>
+<text x="860" y="180" class="i">Generative, top-down or noisy perception</text>
+<circle cx="846" cy="205" r="4" fill="#f9c74f"/>
+<text x="860" y="210" class="i">Metacognitive monitoring of perception</text>
+<circle cx="846" cy="235" r="4" fill="#f9c74f"/>
+<text x="860" y="240" class="i">Agency guided by belief-formation</text>
+<circle cx="846" cy="265" r="4" fill="#f9c74f"/>
+<text x="860" y="270" class="i">Sparse, smooth coding (a 'quality space')</text>
+<rect x="820" y="324" width="360" height="122" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="840" y="354" class="t">Agency &amp; embodiment</text>
+<circle cx="846" cy="379" r="4" fill="#f9c74f"/>
+<text x="860" y="384" class="i">Learning from feedback to pursue goals</text>
+<circle cx="846" cy="409" r="4" fill="#f9c74f"/>
+<text x="860" y="414" class="i">Modelling how outputs affect inputs</text>
+</svg>
