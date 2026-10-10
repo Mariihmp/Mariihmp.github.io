@@ -145,3 +145,41 @@
 }
 .font-display { font-family: var(--font-display); }
 .font-brand { font-family: var(--font-brand); }
+
+/* ---- background layout previews (data-look on <html>) ---- */
+/* cards: background only inside the cards */
+[data-look="cards"] .space-scrim { background: #0b0618; }
+[data-look="cards"] .hero-card {
+  margin-top: 2rem; padding: 4rem 1.75rem 3.5rem; border-radius: 20px;
+  border: 1px solid var(--color-nano-border); background: rgba(11, 6, 24, 0.3);
+}
+[data-look="cards"] .content-card { background: rgba(11, 6, 24, 0.55); margin-top: 1.5rem; }
+[data-look="cards"] main > div:not(:has(.bg-window)) {
+  margin-block: 2rem; border-radius: 20px; border: 1px solid var(--color-nano-border);
+  background: rgba(11, 6, 24, 0.6); padding-block: 0.5rem;
+}
+/* frame: background only around the main column */
+[data-look="frame"] .space-scrim { background: rgba(11, 6, 24, 0.15); }
+[data-look="frame"] main > div {
+  margin-block: 2rem; border-radius: 24px; border: 1px solid var(--color-nano-border);
+  background: rgba(9, 5, 20, 0.95); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+[data-look="frame"] .content-card { background: transparent; border: 0; backdrop-filter: none; -webkit-backdrop-filter: none; }
+/* dark: a dark band behind the content, scene glowing at the edges */
+[data-look="dark"] .space-scrim,
+[data-look="dark"] .space-scrim.home {
+  background:
+    linear-gradient(90deg, rgba(5, 2, 12, 0.1) 0%, rgba(5, 2, 12, 0.88) 30%, rgba(5, 2, 12, 0.88) 70%, rgba(5, 2, 12, 0.1) 100%);
+}
+[data-look="dark"] .content-card { background: transparent; border-color: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+@media (max-width: 767px) {
+  [data-look="dark"] .space-scrim, [data-look="dark"] .space-scrim.home { background: rgba(5, 2, 12, 0.82); }
+}
+
+/* gold accent (from the planet's ring) instead of all-violet */
+[data-accent="gold"] {
+  --color-nano-accent: #f9c74f;
+  --color-nano-accent-hover: #ffe08a;
+  --color-nano-tag-bg: rgba(249, 199, 79, 0.14);
+  --color-nano-tag-text: #ffe6a8;
+}

@@ -15,7 +15,7 @@ export function Home() {
   return (
     <div className="max-w-2xl mx-auto px-6 animate-fade-in">
       {/* Hero */}
-      <section className="pt-20 pb-16 md:pt-32 md:pb-24">
+      <section className="hero-card bg-window pt-20 pb-16 md:pt-32 md:pb-24">
         <div className="space-y-6">
           <h1 className="font-display font-normal text-nano-text text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
             Notes on how machines <em className="italic text-nano-accent">work</em>.
@@ -56,7 +56,7 @@ export function Home() {
         </div>
       </section>
 
-      <div className="glass rounded-2xl px-6 mb-8">
+      <div className="content-card bg-window glass rounded-2xl px-6 mb-8">
 
       {/* Recent Blog Posts */}
       <section className="py-10">
