@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { SITE } from "@/data/site";
+import { SITE, SOCIAL_LINKS } from "@/data/site";
 import { projects } from "@/data/projects";
 import { blogPosts } from "@/data/blog";
 import { tilEntries } from "@/data/til";
 import { Tag } from "@/components/Tag";
-import { ArrowRight, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { format } from "date-fns";
 
 export function Home() {
@@ -39,18 +39,18 @@ export function Home() {
               {SITE.status}
             </span>
             <span className="flex items-center gap-4">
-              <a href={SITE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-nano-text transition-colors">
-                <Github className="w-4 h-4" />
-              </a>
-              <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-nano-text transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href={SITE.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-nano-text transition-colors">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href={`mailto:${SITE.email}`} aria-label="Email" className="hover:text-nano-text transition-colors">
-                <Mail className="w-4 h-4" />
-              </a>
+              {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="hover:text-nano-text transition-colors"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </span>
           </div>
         </div>

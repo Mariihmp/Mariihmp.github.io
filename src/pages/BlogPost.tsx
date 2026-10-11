@@ -31,7 +31,7 @@ export function BlogPost() {
 
       <article>
         <header className="mb-8">
-          <h1 className="text-2xl font-bold text-nano-text mb-3">{post.title}</h1>
+          <h1 className="font-display font-normal text-nano-text tracking-tight text-3xl md:text-[2.6rem] leading-tight text-balance mb-4">{post.title}</h1>
           <div className="flex items-center gap-3 text-sm text-nano-text-secondary mb-3">
             <time className="font-mono tabular-nums text-xs">
               {format(new Date(post.date), "MMMM dd, yyyy")}

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { SITE, NAV_ITEMS } from "@/data/site";
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
+import { SITE, NAV_ITEMS, SOCIAL_LINKS } from "@/data/site";
+import { ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
 import { SpaceBackground } from "@/components/SpaceBackground";
@@ -86,40 +86,18 @@ function Footer() {
       <div className="max-w-2xl mx-auto px-6 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <a
-              href={SITE.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-nano-text-secondary hover:text-nano-text transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="w-4 h-4" />
-            </a>
-            <a
-              href={SITE.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-nano-text-secondary hover:text-nano-text transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a
-              href={SITE.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-nano-text-secondary hover:text-nano-text transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-4 h-4" />
-            </a>
-            <a
-              href={`mailto:${SITE.email}`}
-              className="text-nano-text-secondary hover:text-nano-text transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-4 h-4" />
-            </a>
+            {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("mailto:") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                className="text-nano-text-secondary hover:text-nano-text transition-colors"
+                aria-label={label}
+              >
+                <Icon className="w-4 h-4" />
+              </a>
+            ))}
           </div>
           <p className="text-xs text-nano-text-secondary">
             © {new Date().getFullYear()} {SITE.name}. Built with React & Tailwind.

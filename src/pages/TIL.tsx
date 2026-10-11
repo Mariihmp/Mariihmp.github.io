@@ -16,10 +16,10 @@ export function TIL() {
     <div className="max-w-2xl mx-auto px-6 py-12 animate-fade-in">
       <div className="flex items-center gap-2 mb-2">
         <Lightbulb className="w-5 h-5 text-amber-500" />
-        <h1 className="text-2xl font-bold text-nano-text">Today I Learned</h1>
+        <h1 className="font-display font-normal text-nano-text tracking-tight text-4xl md:text-5xl">Today I Learned</h1>
       </div>
       <p className="text-sm text-nano-text-secondary mb-8">
-        Quick insights and things I pick up day-to-day. Short, useful, and worth remembering.
+        Short notes on things I picked up while reading and researching.
       </p>
 
       <div className="flex flex-wrap gap-2 mb-8">

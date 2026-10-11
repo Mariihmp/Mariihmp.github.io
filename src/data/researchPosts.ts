@@ -124,7 +124,7 @@ The takeaway: *who interacts with whom* matters as much as how smart each agent 
 
 LLM agents bring new capabilities and new failure modes:
 
-- **They can talk.** Communication can make cooperation much easier, by explaining intentions and agreeing on norms. It also enables deception and cheap talk.
+- **They can talk.** Communication can make cooperation much easier, by explaining intentions and agreeing on norms. It also enables deception and cheap talk. I built a [small simulation](https://github.com/Mariihmp/multi-agent-sim) where LLM agents send each other a message before every move of an iterated prisoner's dilemma, to study exactly this.
 - **They can collude.** Cooperation is not always good. Pricing agents that coordinate to raise prices, or monitoring agents that coordinate to hide each other's mistakes, are cooperation *against* the people they serve. Recent work has shown that LLM agents can even hide coordination in innocent-looking text.
 - **They struggle with commons.** In simulations of shared resources, such as *GovSim* (Piatti et al., 2024), many LLM agent societies over-exploited the resource and collapsed. Sustainable outcomes depended heavily on the model and on agents reasoning about the long-term consequences for the group.
 - **They can generalise badly to new partners.** DeepMind's *Melting Pot* suite tests whether agents trained together still cooperate with *unfamiliar* agents, which is exactly the situation deployed systems face.

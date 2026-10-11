@@ -15,9 +15,9 @@ export function Blog() {
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-12 animate-fade-in">
-      <h1 className="text-2xl font-bold text-nano-text mb-2">Blog</h1>
+      <h1 className="font-display font-normal text-nano-text tracking-tight text-4xl md:text-5xl mb-3">Blog</h1>
       <p className="text-sm text-nano-text-secondary mb-8">
-        Thoughts on ML, MLOps, AI safety, and paper summaries.
+        Essays and notes on digital minds, cooperative AI, animal welfare and AI safety.
       </p>
 
       {/* Tag filters */}

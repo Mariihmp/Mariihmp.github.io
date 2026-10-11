@@ -31,7 +31,7 @@ export function ProjectDetail() {
 
       <article>
         <header className="mb-8">
-          <h1 className="text-2xl font-bold text-nano-text mb-3">{project.title}</h1>
+          <h1 className="font-display font-normal text-nano-text tracking-tight text-3xl md:text-[2.6rem] leading-tight text-balance mb-4">{project.title}</h1>
           <time className="text-xs text-nano-text-secondary font-mono tabular-nums">
             {format(new Date(project.date), "MMMM yyyy")}
           </time>
