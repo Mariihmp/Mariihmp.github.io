@@ -31,7 +31,7 @@ export function BlogPost() {
 
       <article>
         <header className="mb-8">
-          <h1 className="text-2xl font-bold text-nano-text mb-3">{post.title}</h1>
+          <h1 className="font-display font-normal text-nano-text tracking-tight text-3xl md:text-[2.6rem] leading-tight text-balance mb-4">{post.title}</h1>
           <div className="flex items-center gap-3 text-sm text-nano-text-secondary mb-3">
             <time className="font-mono tabular-nums text-xs">
               {format(new Date(post.date), "MMMM dd, yyyy")}
@@ -71,6 +71,23 @@ export function BlogPost() {
                   );
                 }
                 return <code>{children}</code>;
+              },
+              // ![alt](video.mp4 "caption") plays a looping video; a .webm with the same name is offered first
+              img: ({ src, alt, title }) => {
+                const isVideo = typeof src === "string" && /\.mp4$/i.test(src);
+                return (
+                  <span className="media">
+                    {isVideo ? (
+                      <video autoPlay muted loop playsInline controls aria-label={alt}>
+                        <source src={src.replace(/\.mp4$/i, ".webm")} type="video/webm" />
+                        <source src={src} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <img src={src} alt={alt ?? ""} loading="lazy" />
+                    )}
+                    {title && <span className="media-caption">{title}</span>}
+                  </span>
+                );
               },
               blockquote: ({ children }) => <blockquote>{children}</blockquote>,
               hr: () => <hr />,

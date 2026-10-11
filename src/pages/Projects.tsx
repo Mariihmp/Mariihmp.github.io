@@ -7,7 +7,6 @@ import { Github, ExternalLink } from "lucide-react";
 const categories = [
   { value: null, label: "All" },
   { value: "ai-safety", label: "AI Safety" },
-  { value: "mlops", label: "MLOps" },
   { value: "ml", label: "ML" },
   { value: "research", label: "Research" },
   { value: "tools", label: "Tools" },
@@ -22,9 +21,9 @@ export function Projects() {
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-12 animate-fade-in">
-      <h1 className="text-2xl font-bold text-nano-text mb-2">Projects</h1>
+      <h1 className="font-display font-normal text-nano-text tracking-tight text-4xl md:text-5xl mb-3">Projects</h1>
       <p className="text-sm text-nano-text-secondary mb-8">
-        A collection of things I've built — from research tools to production systems.
+        Research audits, evaluations, simulations, a game, and some ML along the way.
       </p>
 
       <div className="flex flex-wrap gap-2 mb-8">
