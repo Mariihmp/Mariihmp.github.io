@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" font-family="Sora, Segoe UI, Helvetica, Arial, sans-serif">
+<style>.h{font-size:30px;fill:#ece6ff;font-family:Fraunces, Georgia, serif}.s{font-size:15px;fill:#9a90c0}.n{font-size:22px;fill:#f9c74f;font-family:Fraunces, Georgia, serif}.k{font-size:12px;letter-spacing:.12em;text-transform:uppercase}.t{font-size:17px;font-weight:600;fill:#ece6ff}.d{font-size:14px;fill:#cfc6ef}</style>
+<rect width="1200" height="500" rx="20" fill="#0b0618"/>
+<text x="40" y="62" class="h">Eight criteria for evidence of sentience</text>
+<text x="40" y="92" class="s">Used to assess decapod crustaceans and cephalopod molluscs. Adapted from Birch et al. (2021), LSE report for the UK government.</text>
+<rect x="40" y="130" width="270" height="150" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="60" y="164" class="n">1</text><text x="290" y="164" text-anchor="end" class="k" fill="#b39bff">Neural</text>
+<text x="60" y="202" class="t">Nociceptors</text>
+<text x="60" y="230" class="d">Receptors sensitive to noxious</text>
+<text x="60" y="250" class="d">stimuli</text>
+<rect x="330" y="130" width="270" height="150" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="350" y="164" class="n">2</text><text x="580" y="164" text-anchor="end" class="k" fill="#b39bff">Neural</text>
+<text x="350" y="202" class="t">Integrative brain regions</text>
+<text x="350" y="230" class="d">Regions that integrate</text>
+<text x="350" y="250" class="d">information from different</text>
+<text x="350" y="270" class="d">sources</text>
+<rect x="620" y="130" width="270" height="150" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="640" y="164" class="n">3</text><text x="870" y="164" text-anchor="end" class="k" fill="#b39bff">Neural</text>
+<text x="640" y="202" class="t">Connected pathways</text>
+<text x="640" y="230" class="d">Nociceptors linked to those</text>
+<text x="640" y="250" class="d">integrative regions</text>
+<rect x="910" y="130" width="270" height="150" rx="14" fill="#160c2c" stroke="#3b2a6b"/>
+<text x="930" y="164" class="n">4</text><text x="1160" y="164" text-anchor="end" class="k" fill="#b39bff">Neural</text>
+<text x="930" y="202" class="t">Painkillers change responses</text>
+<text x="930" y="230" class="d">Responses altered by painkillers</text>
+<text x="930" y="250" class="d">or anaesthetics</text>
+<rect x="40" y="300" width="270" height="150" rx="14" fill="#160c2c" stroke="#5a4720"/>
+<text x="60" y="334" class="n">5</text><text x="290" y="334" text-anchor="end" class="k" fill="#f9c74f">Behavioural</text>
+<text x="60" y="372" class="t">Motivational trade-offs</text>
+<text x="60" y="400" class="d">Weighs avoiding harm against</text>
+<text x="60" y="420" class="d">getting a reward</text>
+<rect x="330" y="300" width="270" height="150" rx="14" fill="#160c2c" stroke="#5a4720"/>
+<text x="350" y="334" class="n">6</text><text x="580" y="334" text-anchor="end" class="k" fill="#f9c74f">Behavioural</text>
+<text x="350" y="372" class="t">Flexible self-protection</text>
+<text x="350" y="400" class="d">Wound-directed behaviour like</text>
+<text x="350" y="420" class="d">guarding or rubbing</text>
+<rect x="620" y="300" width="270" height="150" rx="14" fill="#160c2c" stroke="#5a4720"/>
+<text x="640" y="334" class="n">7</text><text x="870" y="334" text-anchor="end" class="k" fill="#f9c74f">Behavioural</text>
+<text x="640" y="372" class="t">Associative learning</text>
+<text x="640" y="400" class="d">Learns to avoid harm beyond</text>
+<text x="640" y="420" class="d">simple habituation</text>
+<rect x="910" y="300" width="270" height="150" rx="14" fill="#160c2c" stroke="#5a4720"/>
+<text x="930" y="334" class="n">8</text><text x="1160" y="334" text-anchor="end" class="k" fill="#f9c74f">Behavioural</text>
+<text x="930" y="372" class="t">Values relief when injured</text>
+<text x="930" y="400" class="d">Seeks out painkillers or</text>
+<text x="930" y="420" class="d">analgesia once hurt</text>
+</svg>
